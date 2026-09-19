@@ -4,93 +4,307 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JD's Entertainment | Wisconsin DJ</title>
+
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#07142f;color:#fff}
-header{background:linear-gradient(135deg,#0754a8,#32106b);padding:25px 20px;text-align:center}
-.logo{max-width:300px;width:90%;height:auto}
-nav{margin-top:18px}
-nav a{color:white;text-decoration:none;font-weight:bold;margin:0 12px}
-.hero{padding:75px 20px;text-align:center;background:linear-gradient(180deg,#101f50,#07142f)}
-.hero h1{font-size:46px;margin:15px 0}
-.hero p{font-size:21px}
-.button{display:inline-block;margin-top:20px;padding:15px 28px;background:#fff;color:#16295a;border-radius:8px;text-decoration:none;font-weight:bold}
-section{max-width:1000px;margin:auto;padding:55px 20px}
-h2{text-align:center;font-size:32px;color:#c9b7ff}
-.card{background:#101f43;border-radius:12px;padding:25px;margin:18px 0}
-.gallery{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
-.gallery img{max-width:100%;width:450px;border-radius:12px}
-footer{text-align:center;padding:30px;background:#050d20}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#07142f;
+color:white;
+line-height:1.6
+}
+
+header{
+background:linear-gradient(135deg,#0754a8,#32106b);
+padding:25px 20px;
+text-align:center;
+box-shadow:0 3px 12px rgba(0,0,0,.4)
+}
+
+.logo{
+max-width:330px;
+width:90%;
+height:auto
+}
+
+nav{
+margin-top:18px
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+margin:0 12px;
+display:inline-block;
+padding:5px
+}
+
+nav a:hover{
+color:#d7c5ff
+}
+
+.hero{
+padding:90px 20px;
+text-align:center;
+background:
+linear-gradient(rgba(16,31,80,.9),rgba(7,20,47,.98));
+}
+
+.hero h1{
+font-size:48px;
+line-height:1.15;
+margin:10px 0 20px
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:25px
+}
+
+.button{
+display:inline-block;
+padding:15px 30px;
+background:white;
+color:#16295a;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px
+}
+
+.button:hover{
+background:#d7c5ff
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:65px 20px
+}
+
+h2{
+text-align:center;
+font-size:34px;
+color:#c9b7ff;
+margin-bottom:30px
+}
+
+.card{
+background:#101f43;
+border-radius:14px;
+padding:28px;
+margin:20px 0;
+box-shadow:0 5px 15px rgba(0,0,0,.25)
+}
+
+.card h3{
+color:#d7c5ff;
+font-size:24px;
+margin-top:0
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:25px
+}
+
+.gallery img{
+max-width:100%;
+width:500px;
+border-radius:14px;
+box-shadow:0 5px 18px rgba(0,0,0,.4)
+}
+
+.contact{
+text-align:center
+}
+
+.contact a{
+color:#d7c5ff;
+font-weight:bold
+}
+
+footer{
+text-align:center;
+padding:35px 20px;
+background:#050d20;
+color:#ddd
+}
+
+@media(max-width:700px){
+.hero h1{
+font-size:36px
+}
+
+.hero p{
+font-size:18px
+}
+
+nav a{
+margin:4px 6px
+}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="shirt%20logo.png" alt="JD's Entertainment Logo" class="logo">
+
+<img src="shirt%20logo.png"
+alt="JD's Entertainment Logo"
+class="logo">
+
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About Keith</a>
 <a href="#services">Services & Packages</a>
 <a href="#contact">Contact & Booking</a>
 </nav>
+
 </header>
 
+
 <section class="hero" id="home">
-<h1>Unforgettable Events.<br>Great Music.<br>Lasting Memories.</h1>
-<p>DJ entertainment for weddings, parties and special events.</p>
-<a class="button" href="#contact">Reserve Your Event Date</a>
+
+<h1>
+Unforgettable Events.<br>
+Great Music.<br>
+Lasting Memories.
+</h1>
+
+<p>
+DJ entertainment for weddings, parties and special events.
+</p>
+
+<a class="button" href="#contact">
+Reserve Your Event Date
+</a>
+
 </section>
+
 
 <section id="about">
+
 <h2>About Keith</h2>
+
 <div class="card">
-<p>Welcome to JD's Entertainment! I'm Keith, and I enjoy helping people celebrate life's special moments with great music and a fun atmosphere.</p>
-<p>Whether it's a wedding, birthday, anniversary or special event, my goal is simple: to help create memories that last.</p>
+
+<p>
+Welcome to JD's Entertainment! I'm Keith, and I enjoy helping people celebrate life's special moments with great music and a fun atmosphere.
+</p>
+
+<p>
+Whether it's a wedding, birthday, anniversary or special event, my goal is simple: to help create memories that last.
+</p>
+
 </div>
+
 </section>
 
+
 <section id="services">
+
 <h2>Services & Packages</h2>
 
 <div class="card">
+
 <h3>DJ Entertainment</h3>
-<p>Professional DJ entertainment with music for your event, regular lighting and a setup designed to keep your guests enjoying the celebration.</p>
+
+<p>
+Professional DJ entertainment with music for your event, regular lighting and a setup designed to keep your guests enjoying the celebration.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Weddings & Special Events</h3>
-<p>Music and entertainment for wedding receptions, parties and other special occasions.</p>
+
+<p>
+Music and entertainment for wedding receptions, parties and other special occasions.
+</p>
+
 </div>
 
+
 <div class="card">
+
 <h3>Optional Add-Ons</h3>
-<p>Smoke machine and bubble machine available upon request.</p>
+
+<p>
+Smoke machine and bubble machine available upon request.
+</p>
+
 </div>
+
 </section>
+
 
 <section>
+
 <h2>Our Setup</h2>
+
 <div class="gallery">
-<img src="shirt%20logo.png" alt="JD's Entertainment">
+
+<img src="shirt%20logo.png"
+alt="JD's Entertainment">
+
 </div>
+
 </section>
+
 
 <section id="contact">
+
 <h2>Contact & Booking</h2>
-<div class="card">
-<p><strong>Reserve your event date.</strong></p>
-<p>Reach out to JD's Entertainment to start planning your event.</p>
-<p>Phone: 920-509-9039</p>
-<p>Email: ajlk0119@gmail.com</p>
-<p>Website: jdsentertainmentwi.com</p>
+
+<div class="card contact">
+
+<h3>Reserve Your Event Date</h3>
+
+<p>
+Reach out to JD's Entertainment to start planning your event.
+</p>
+
+<p>
+<strong>Phone:</strong>
+<a href="tel:9205099039">920-509-9039</a>
+</p>
+
+<p>
+<strong>Email:</strong>
+<a href="mailto:ajlk0119@gmail.com">ajlk0119@gmail.com</a>
+</p>
+
+<p>
+<strong>Website:</strong>
+jdsentertainmentwi.com
+</p>
+
 </div>
+
 </section>
 
+
 <footer>
-<p>JD's Entertainment</p>
+
+<p><strong>JD's Entertainment</strong></p>
+
 <p>Creating memories one song at a time.</p>
+
 </footer>
 
 </body>
 </html>
+
+Now press Ctrl + V once. That's it. Don't save yet.
