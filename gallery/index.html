@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JD's Entertainment - Gallery</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #111;
+  color: white;
+}
+header {
+  text-align: center;
+  padding: 25px 15px;
+}
+h1 {
+  margin-bottom: 10px;
+}
+a {
+  color: #b88cff;
+  text-decoration: none;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.gallery img,
+.gallery video {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>JD's Entertainment Gallery</h1>
+<p>Creating memories one song at a time.</p>
+<p><a href="../">← Back to JD's Entertainment</a></p>
+</header>
+
+<div class="gallery" id="gallery">
+<p>Loading pictures...</p>
+</div>
+
+<script>
+const gallery = document.getElementById("gallery");
+
+fetch("https://api.github.com/repos/jdsentertainment/jdsentertainmentwi/contents/gallery")
+.then(response => response.json())
+.then(files => {
+  gallery.innerHTML = "";
+
+  files.forEach(file => {
+    if (file.type !== "file") return;
+
+    const name = file.name.toLowerCase();
+
+    if (name.endsWith(".jpg") ||
+        name.endsWith(".jpeg") ||
+        name.endsWith(".png") ||
+        name.endsWith(".webp")) {
+
+      const img = document.createElement("img");
+      img.src = file.download_url;
+      img.alt = "JD's Entertainment event photo";
+      gallery.appendChild(img);
+
+    } else if (name.endsWith(".mp4")) {
+
+      const video = document.createElement("video");
+      video.src = file.download_url;
+      video.controls = true;
+      video.preload = "metadata";
+      gallery.appendChild(video);
+    }
+  });
+})
+.catch(error => {
+  gallery.innerHTML = "<p>Gallery could not be loaded.</p>";
+});
+</script>
+
+</body>
+</html>
